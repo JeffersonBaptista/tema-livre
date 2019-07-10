@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jefferson Livros</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+
+</head>
+
+<body>
+    <div class="menu">
+        <nav>
+            <ul class="lista">
+                <li> <a href="/cadastrar">Cadastrar Livro</a> </li>
+
+            </ul>
+        </nav>
+    </div>
+    <h1>ACERVO</h1>
+    <div>
+            <div th:each="livro : ${livros} ">
+		<a th:href="@{/fichaCatalografica/{id}(id=${livro.id}) }"><p th:text="${'Titulo: '+livro.titulo}"></p></a>
+		<p th:text="${'Preço: '+livro.preco}"></p>
+	</div>
+    </div>
+
+
+
+</body>
+
+</html>

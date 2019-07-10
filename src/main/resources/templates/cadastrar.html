@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jefferson Livros</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+
+</head>
+
+<body>
+    <div class="menu">
+        <nav>
+            <ul class="lista">
+                <li> <a href="/">Pagina inicial</a> </li>
+
+            </ul>
+        </nav>
+    </div>
+   
+    <div>
+           <form method="POST">
+        <fieldset>
+            <legend>
+                <h2>Cadastrar Livro</h2>
+            </legend>
+            Titulo: <input type="text" name="titulo"> <br><br>
+            Autor: <input type="text" name="autor"><br><br>
+            Categoria: <input type="text" name="categotia"><br><br>
+            Editora: <input type="text" name="editora"><br><br>
+            ISBN: <input type="text" name="isbn"><br><br>
+            CodigoBarras: <input type="text" name="codigoBarras"><br><br>
+            Preço: <input type="number" step="any" name="preco"><br><br>
+            <button class="Cadastrar" type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+    
+    
+	</div>
+    </div>
+
+
+
+</body>
+
+</html>
